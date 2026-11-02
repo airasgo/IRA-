@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRA 연구소</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- IRA 연구소 / HTML -->
+
+<!-- 인트로 -->
+<section id="intro">
+  <div class="security-memo">
+    <span class="memo-label">MEMO</span>
+    <strong>3469</strong>
+  </div>
+
+  <div class="intro-content">
+    <div class="terminal-screen">
+
+      <div class="terminal-header">
+        <span>IRA / SECURITY TERMINAL</span>
+        <span class="terminal-status">● ONLINE</span>
+      </div>
+
+      <!-- 시스템 시작 -->
+      <div id="intro-ready">
+        <p class="terminal-small">SYSTEM INITIALIZATION</p>
+        <h2>IRA ACCESS SYSTEM</h2>
+        <p class="terminal-description">
+          보안 시스템에 연결하려면 시작 버튼을 누르십시오.
+        </p>
+        <button id="intro-begin">시스템 시작 →</button>
+      </div>
+
+      <!-- 타이핑 화면 -->
+      <div id="typing-box" class="hidden">
+        <p class="terminal-small">LOADING SYSTEM DATA...</p>
+        <div class="terminal-output">
+          <span id="typing"></span><span class="cursor"></span>
+        </div>
+      </div>
+
+      <!-- 비밀번호 화면 -->
+      <div id="password-screen" class="hidden">
+        <div class="security-lock">◇</div>
+        <p class="terminal-small">SECURITY VERIFICATION</p>
+        <h2>보안 인증</h2>
+        <p class="terminal-description">
+          접근 권한을 확인하기 위해 비밀번호를 입력하십시오.
+        </p>
+
+        <form id="password-form">
+          <input
+            id="password-input"
+            type="password"
+            inputmode="numeric"
+            maxlength="4"
+            placeholder="ENTER PASSWORD"
+            autocomplete="off"
+            aria-label="보안 비밀번호"
+          >
+          <button type="submit">ACCESS SYSTEM →</button>
+        </form>
+
+        <p id="password-status">AUTHORIZATION REQUIRED</p>
+      </div>
+
+      <!-- 접근 승인 -->
+      <div id="ira-logo" class="hidden">
+        <p class="access-granted">✓ ACCESS GRANTED</p>
+        <h1>IRA 연구소</h1>
+        <p>
+          INTER-SPECIES RESEARCH<br>
+          ADMINISTRATION
+        </p>
+        <button id="start-button">연구 시작하기 →</button>
+      </div>
+
+      <div class="terminal-footer">
+        <span>INTER-SPECIES RESEARCH ADMINISTRATION</span>
+        <span>SECURE CONNECTION</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- 메인 홈페이지 -->
+<div id="main-site" class="hidden">
+
+  <header class="site-header">
+    <a href="#home" class="site-logo">IRA RESEARCH</a>
+
+    <nav class="site-nav">
+      <a href="#about">연구소 소개</a>
+      <a href="#departments">연구 부서</a>
+      <a href="#database">자료실</a>
+      <a href="#facility">연구소 지도</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 연구소 소개 -->
+    <section id="home" class="hero-section">
+      <p class="eyebrow">INTER-SPECIES RESEARCH ADMINISTRATION</p>
+      <h1>IRA 연구소</h1>
+      <p class="hero-motto">
+        다양한 종족들과 함께하는 더 나은 미래를 위해.
+      </p>
+    </section>
+
+    <section id="about" class="content-section">
+      <div class="section-heading">
+        <span class="section-number">01 / ABOUT</span>
+        <h2>연구소 소개</h2>
+      </div>
+
+      <div class="glass-panel about-panel">
+        <h3>INTER-SPECIES RESEARCH ADMINISTRATION</h3>
+
+        <p>
+          IRA 연구소는 인간이 아닌 존재들을
+          연구하고 관리하기 위해 설립된 비밀 기관입니다.
+        </p>
+
+        <p>
+          일반 사회에 알려지지 않은 이종족을 조사하고,
+          위험한 개체를 격리하여 지구인의 안전을 보호합니다.
+        </p>
+
+        <p>
+          연구소의 모든 자료는 허가된 관계자에 한하여
+          열람할 수 있습니다.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 연구 부서 -->
+    <section id="departments" class="content-section">
+      <div class="section-heading">
+        <span class="section-number">02 / DEPARTMENTS</span>
+        <h2>연구 부서</h2>
+      </div>
+
+      <div class="department-grid">
+
+        <button class="wide-card" data-page="object">
+          <span class="card-index">DEPARTMENT 01</span>
+          <span class="card-name">오브젝트 헤드</span>
+          <span class="card-english">OBJECT HEAD</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="wide-card locked" type="button">
+          <span class="card-index">DEPARTMENT 02 / LOCKED</span>
+          <span class="card-name">수인</span>
+          <span class="card-english">THERIANTHROPE</span>
+          <span class="card-arrow">⌁</span>
+        </button>
+
+        <button class="wide-card locked" type="button">
+          <span class="card-index">DEPARTMENT 03 / LOCKED</span>
+          <span class="card-name">페이</span>
+          <span class="card-english">FAE</span>
+          <span class="card-arrow">⌁</span>
+        </button>
+
+        <button class="wide-card locked" type="button">
+          <span class="card-index">DEPARTMENT 04 / LOCKED</span>
+          <span class="card-name">촉수 / 슬라임</span>
+          <span class="card-english">TENTACLE / SLIME</span>
+          <span class="card-arrow">⌁</span>
+        </button>
+
+        <button class="wide-card locked" type="button">
+          <span class="card-index">DEPARTMENT 05 / LOCKED</span>
+          <span class="card-name">키메라</span>
+          <span class="card-english">CHIMERA</span>
+          <span class="card-arrow">⌁</span>
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- 자료실 -->
+    <section id="database" class="content-section">
+      <div class="section-heading">
+        <span class="section-number">03 / DATABASE</span>
+        <h2>자료실</h2>
+      </div>
+
+      <div class="department-grid two-column">
+        <button class="wide-card" data-page="researchers">
+          <span class="card-index">DATABASE 01</span>
+          <span class="card-name">연구원 기록</span>
+          <span class="card-english">RESEARCHER RECORDS</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="wide-card" data-page="products">
+          <span class="card-index">DATABASE 02</span>
+          <span class="card-name">약물 및 제품</span>
+          <span class="card-english">MEDICINES & PRODUCTS</span>
+          <span class="card-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- 연구소 지도 -->
+    <section id="facility" class="content-section">
+      <div class="section-heading">
+        <span class="section-number">04 / FACILITY MAP</span>
+        <h2>연구소 지도</h2>
+      </div>
+
+      <div class="floor-grid">
+        <button class="floor-card" data-floor="1F">1층 <span>1F</span></button>
+        <button class="floor-card" data-floor="2F">2층 <span>2F</span></button>
+        <button class="floor-card" data-floor="3F">3층 <span>3F</span></button>
+        <button class="floor-card" data-floor="4F">4층 <span>4F</span></button>
+        <button class="floor-card" data-floor="5F">5층 <span>5F</span></button>
+        <button class="floor-card" data-floor="B1">지하 1층 <span>B1</span></button>
+        <button class="floor-card" data-floor="B2-B4">지하 2~4층 <span>B2–B4</span></button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    IRA RESEARCH · INTER-SPECIES RESEARCH ADMINISTRATION
+  </footer>
+
+</div>
+
+
+<!-- 상세 페이지 -->
+<section id="detail-page" class="detail-page hidden">
+
+  <header class="detail-header">
+    <button id="detail-back" class="back-button" type="button">
+      ← 돌아가기
+    </button>
+    <span>IRA / INTERNAL DATABASE</span>
+  </header>
+
+  <div class="detail-container">
+    <p id="detail-english" class="eyebrow"></p>
+    <h1 id="detail-title"></h1>
+    <div id="detail-body"></div>
+  </div>
+
+</section>
+
+
+<!-- 시스템 오류 알림 -->
+<div id="notice" class="notice" role="alert" aria-live="assertive">
+  <span class="warning-icon">⚠</span>
+  <span class="notice-message">아직 준비되지 않았습니다.</span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
